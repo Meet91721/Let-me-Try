@@ -23,7 +23,12 @@ float func(float a, float b)
 {
     int a1 = a;
     int b1 = b;
-    float ans = (a1 % b1) + (a - a1) - (b-b1)*(a1/b1);
-    return ans;
-
+    if (a1 >= 0 && b1 >= 0)
+    {    
+        float ans = (a1 % b1) - (a - a1) + (b-b1)*(a1/b1);
+        if (ans >= 0)
+        return ans;
+        else
+        return (-1) * ans;
+    }
 }

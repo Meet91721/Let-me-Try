@@ -16,11 +16,8 @@ int main()
     ;
 }
 
-void func(float a, float b)
+void func(float X, float N)
 {
-    int a1 = a;
-    int b1 = b;
-    int divi = a / b;
-    cout << a - b * divi;
+    return ((X >= 0 ? X : -X) >= (N >= 0 ? N : -N)) ? (func(X - N, N)) : X;
 }
 
